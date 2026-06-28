@@ -1,52 +1,74 @@
 const menuBtn = document.querySelector(".menu-btn");
-const nav = document.querySelector("nav");
+const navbar = document.querySelector(".navbar");
+const topBtn = document.querySelector(".top-btn");
+const searchInput = document.querySelector(".search-box input");
 
 menuBtn.addEventListener("click", () => {
-    if (nav.style.display === "block") {
-        nav.style.display = "none";
-    } else {
-        nav.style.display = "block";
-    }
+    navbar.classList.toggle("active");
 });
 
-const links = document.querySelectorAll("nav a");
-
-links.forEach(link => {
+document.querySelectorAll(".navbar a").forEach(link => {
     link.addEventListener("click", () => {
         if (window.innerWidth <= 768) {
-            nav.style.display = "none";
+            navbar.classList.remove("active");
         }
     });
 });
 
-const cards = document.querySelectorAll(".brand-card, .product-card");
+window.addEventListener("scroll", () => {
 
-cards.forEach(card => {
-    card.addEventListener("mouseenter", () => {
-        card.style.transform = "translateY(-8px)";
-    });
-
-    card.addEventListener("mouseleave", () => {
-        card.style.transform = "translateY(0)";
-    });
-});
-
-const buttons = document.querySelectorAll(".btn, .product-card button");
-
-buttons.forEach(button => {
-    button.addEventListener("click", () => {
-        alert("Welcome to Uswa Nazish Luxury Shopping Mall!");
-    });
-});
-
-window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) {
-        nav.style.display = "block";
+    if (window.scrollY > 300) {
+        topBtn.style.display = "flex";
     } else {
-        nav.style.display = "none";
+        topBtn.style.display = "none";
     }
+
+    const header = document.querySelector(".header");
+
+    if (window.scrollY > 50) {
+        header.style.background = "#000";
+    } else {
+        header.style.background = "#111";
+    }
+
+});
+
+topBtn.addEventListener("click", e => {
+    e.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+searchInput.addEventListener("keyup", () => {
+    const value = searchInput.value.toLowerCase();
+
+    document.querySelectorAll(".product-card").forEach(card => {
+
+        const text = card.innerText.toLowerCase();
+
+        card.style.display = text.includes(value)
+            ? "block"
+            : "none";
+
+    });
+
+});
+
+document.querySelectorAll(".product-card button").forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        alert("Thank you for choosing Uswa Nazish Luxury Shopping Mall!");
+
+    });
+
 });
 
 window.addEventListener("load", () => {
-    nav.style.display = window.innerWidth > 768 ? "block" : "none";
+
+    topBtn.style.display = "none";
+
 });
