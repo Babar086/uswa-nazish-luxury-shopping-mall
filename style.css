@@ -319,3 +319,6 @@ padding:70px 5%;
 }
 
 }
+.navbar.active{
+display:flex;
+}
