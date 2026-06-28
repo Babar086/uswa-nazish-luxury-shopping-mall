@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uswa Nazish Luxury Shopping Mall</title>
 
-<title>Uswa Nazish Luxury Shopping Mall</title>
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
-<header>
+<header class="header">
 
 <div class="logo">
 <h2>Uswa Nazish</h2>
 <span>Luxury Shopping Mall</span>
 </div>
 
-<nav>
+<nav class="navbar">
 
-<ul>
-
-<li><a href="#home">Home</a></li>
-
-<li><a href="#brands">Brands</a></li>
-
-<li><a href="#products">Products</a></li>
-
-<li><a href="#offers">Offers</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
+<a href="#home">Home</a>
+<a href="#categories">Categories</a>
+<a href="#products">Products</a>
+<a href="#offers">Offers</a>
+<a href="#contact">Contact</a>
 
 </nav>
 
+<div class="header-right">
+
+<div class="search-box">
+<input type="text" placeholder="Search Products...">
+<i class="fas fa-search"></i>
+</div>
+
 <div class="menu-btn">
-☰
+<i class="fas fa-bars"></i>
+</div>
+
 </div>
 
 </header>
@@ -50,72 +54,84 @@
 
 <div class="hero-content">
 
-<h1>Luxury Shopping Experience</h1>
+<h1>Luxury Shopping Starts Here</h1>
 
 <p>
 Discover premium fashion, beauty,
 electronics and lifestyle products
-all in one place.
+with amazing deals and trusted quality.
 </p>
 
+<div class="hero-buttons">
+
 <a href="#products" class="btn">
-Explore Collection
+Shop Now
+</a>
+
+<a href="#offers" class="btn outline">
+View Offers
 </a>
 
 </div>
 
-</section>
-
-<section class="brands" id="brands">
-
-<h2>Top Luxury Brands</h2>
-
-<div class="brand-box">
-
-<div class="brand-card">
-<h3>Gucci</h3>
-</div>
-
-<div class="brand-card">
-<h3>Nike</h3>
-</div>
-
-<div class="brand-card">
-<h3>Apple</h3>
-</div>
-
-<div class="brand-card">
-<h3>Louis Vuitton</h3>
-</div>
-
 </div>
 
 </section>
+<section class="categories" id="categories">
+
+<h2 class="title">Shop By Category</h2>
+
+<div class="category-box">
+
+<div class="category-card">
+<i class="fas fa-shirt"></i>
+<h3>Fashion</h3>
+</div>
+
+<div class="category-card">
+<i class="fas fa-mobile-screen"></i>
+<h3>Electronics</h3>
+</div>
+
+<div class="category-card">
+<i class="fas fa-gem"></i>
+<h3>Jewellery</h3>
+</div>
+
+<div class="category-card">
+<i class="fas fa-heart"></i>
+<h3>Beauty</h3>
+</div>
+
+</div>
+
+</section>
+
 <section class="products" id="products">
 
-<h2>Featured Products</h2>
+<h2 class="title">Featured Products</h2>
 
-<div class="product-container">
+<div class="product-box">
 
 <div class="product-card">
 <div class="product-img"></div>
 <h3>Luxury Handbag</h3>
-<p>Premium Quality Collection</p>
-<button>View Details</button>
+<p>Premium Collection</p>
+<button>Buy Now</button>
 </div>
 
 <div class="product-card">
 <div class="product-img"></div>
 <h3>Smart Watch</h3>
-<p>Modern Lifestyle Edition</p>
-<button>View Details</button>
+<p>Latest Edition</p>
+<button>Buy Now</button>
 </div>
 
 <div class="product-card">
 <div class="product-img"></div>
-<h3>Sports Shoes</h3>
+<h3>Running Shoes</h3>
 <p>Comfort & Style</p>
-<button>View Details</button>
+<button>Buy Now</button>
 </div>
 
 </div>
@@ -124,20 +140,17 @@ Explore Collection
 
 <section class="offers" id="offers">
 
-<h2>Special Offers</h2>
+<div class="offer-content">
 
-<div class="offer-box">
-
-<h3>Summer Mega Sale</h3>
+<h2>MEGA SALE</h2>
 
 <p>
-Up to 50% OFF on selected luxury
-fashion, electronics and beauty products.
+Flat 50% OFF on selected premium products.
 Limited Time Offer.
 </p>
 
-<a href="#" class="btn">
-Shop Now
+<a href="#products" class="btn">
+Shop Today
 </a>
 
 </div>
@@ -146,15 +159,27 @@ Shop Now
 
 <section class="contact" id="contact">
 
-<h2>Contact Us</h2>
+<h2 class="title">Contact Us</h2>
 
-<p>Email : uswanazish311@gmail.com</p>
+<p>Email : info@uswanazishmall.com</p>
 
-<p>Phone : 03157540218</p>
+<p>Phone : +92 300 1234567</p>
 
-<p>Location : kacha khuuh Khanewal, Pakistan</p>
+<p>Location : Khanewal, Punjab, Pakistan</p>
 
 </section>
+
+<a href="#" class="top-btn">
+<i class="fas fa-arrow-up"></i>
+</a>
+
+<a href="https://wa.me/923001234567"
+class="whatsapp"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
 
 <footer>
 
